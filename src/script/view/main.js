@@ -34,4 +34,5 @@ const main = function () {
   };
 
   buttonSearchElement.addEventListener("click", onButtonSearchClicked);
+  
 };
