@@ -9,7 +9,10 @@ const main = () => {
   //     .catch(fallbackResult);
   // };
 
+  const Delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
   const onButtonSearchClicked = async () => {
+    clubListElement.innerHTML = '<div id="loader"><div class="lds-dual-ring"></div></div>'
+    await Delay(2000)
     try {
       const result = await DataSource.searchClub(searchElement.value);
       renderResult(result);
